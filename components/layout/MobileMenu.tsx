@@ -6,7 +6,6 @@ import { X, ArrowRight, Mail, Phone, Sparkles } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { NAV_LINKS, SITE_CONFIG } from '@/lib/constants';
 import Button from '@/components/ui/Button';
-import ThemeToggle from './ThemeToggle';
 
 interface MobileMenuProps {
   isOpen: boolean;
@@ -209,7 +208,7 @@ export default function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
               >
                 <a
                   href={`mailto:${SITE_CONFIG.email}`}
-                  className="group flex items-center space-x-3 px-4 py-3.5 rounded-xl bg-gray-50/80 dark:bg-dark-card/80 backdrop-blur-sm border border-transparent hover:border-secondary-500/20 text-sm text-gray-600 dark:text-gray-400 hover:text-secondary-600 dark:hover:text-secondary-400 transition-all duration-300"
+                  className="group flex items-center space-x-3 px-4 py-3.5 rounded-xl bg-gray-50/80 backdrop-blur-sm border border-transparent hover:border-secondary-500/20 text-sm text-gray-600 hover:text-secondary-600 transition-all duration-300"
                 >
                   <div className="w-9 h-9 flex items-center justify-center rounded-lg bg-gradient-to-br from-secondary-500/10 to-secondary-400/5 group-hover:from-secondary-500/20 group-hover:to-secondary-400/10 transition-all duration-300">
                     <Mail className="w-4 h-4 text-secondary-500" />
@@ -218,29 +217,13 @@ export default function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
                 </a>
                 <a
                   href={`tel:${SITE_CONFIG.phone}`}
-                  className="group flex items-center space-x-3 px-4 py-3.5 rounded-xl bg-gray-50/80 dark:bg-dark-card/80 backdrop-blur-sm border border-transparent hover:border-secondary-500/20 text-sm text-gray-600 dark:text-gray-400 hover:text-secondary-600 dark:hover:text-secondary-400 transition-all duration-300"
+                  className="group flex items-center space-x-3 px-4 py-3.5 rounded-xl bg-gray-50/80 backdrop-blur-sm border border-transparent hover:border-secondary-500/20 text-sm text-gray-600 hover:text-secondary-600 transition-all duration-300"
                 >
                   <div className="w-9 h-9 flex items-center justify-center rounded-lg bg-gradient-to-br from-secondary-500/10 to-secondary-400/5 group-hover:from-secondary-500/20 group-hover:to-secondary-400/10 transition-all duration-300">
                     <Phone className="w-4 h-4 text-secondary-500" />
                   </div>
                   <span>{SITE_CONFIG.phone}</span>
                 </a>
-              </motion.div>
-
-              {/* Theme toggle + Footer */}
-              <motion.div
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ delay: 0.8, duration: 0.5 }}
-                className="mt-10 pt-6 border-t border-gray-200/50 dark:border-gray-700/50"
-              >
-                <div className="flex items-center justify-between px-2">
-                  <div className="flex items-center space-x-2">
-                    <div className="w-1.5 h-1.5 rounded-full bg-secondary-500 animate-pulse" />
-                    <span className="text-xs text-gray-400 dark:text-gray-500 font-medium">Switch theme</span>
-                  </div>
-                  <ThemeToggle />
-                </div>
               </motion.div>
             </div>
           </motion.div>

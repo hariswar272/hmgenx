@@ -5,7 +5,6 @@ import Image from 'next/image';
 import { motion } from 'framer-motion';
 import { NAV_LINKS } from '@/lib/constants';
 import Button from '@/components/ui/Button';
-import ThemeToggle from './ThemeToggle';
 import MobileMenu from './MobileMenu';
 
 export default function Navbar() {
@@ -102,7 +101,6 @@ export default function Navbar() {
 
             {/* Right Side Actions */}
             <div className="flex items-center space-x-3">
-              <ThemeToggle />
               <Button
                 className="hidden md:inline-flex"
                 onClick={() => handleLinkClick('#contact')}
