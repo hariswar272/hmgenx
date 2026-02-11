@@ -2,7 +2,7 @@
 
 import React, { useRef, useState } from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
-import { Code, Calendar, Star, CheckCircle2, Award, Briefcase, Mail, MessageCircle } from 'lucide-react';
+import { Code, Calendar, Star, CheckCircle2, Award, Briefcase, Mail, MessageCircle, TrendingUp } from 'lucide-react';
 import Avatar from '@/components/ui/Avatar';
 import AnimatedCounter from '@/components/ui/AnimatedCounter';
 import SectionHeading from '@/components/ui/SectionHeading';
@@ -25,18 +25,25 @@ const memberAccents = [
     secondary: '#c9982c',
     gradient: 'from-secondary-600/5 via-secondary-500/3 to-transparent',
   },
+  {
+    primary: '#df6352',
+    secondary: '#ec8a7b',
+    gradient: 'from-accent-500/5 via-accent-400/3 to-transparent',
+  },
 ];
 
 const roleIcons: Record<string, typeof Award> = {
   'Founder': Award,
   'Co-Founder': Code,
   'CEO': Briefcase,
+  'CMO': TrendingUp,
 };
 
 const specialties: Record<string, string[]> = {
   'Founder': ['Leadership', 'Vision', 'Strategy'],
   'Co-Founder': ['Technology', 'Innovation', 'Design'],
   'CEO': ['Business', 'Growth', 'Operations'],
+  'CMO': ['Marketing', 'Branding', 'Analytics'],
 };
 
 function TeamCard({ member, index, accent }: {
@@ -199,11 +206,11 @@ export default function TeamSection() {
       {/* Subtle background decorations */}
       <motion.div
         style={{ y: y1 }}
-        className="absolute top-20 -left-20 w-72 h-72 bg-secondary-500/[0.03] dark:bg-secondary-500/[0.02] rounded-full blur-3xl"
+        className="absolute top-20 -left-20 w-48 sm:w-72 h-48 sm:h-72 bg-secondary-500/[0.03] dark:bg-secondary-500/[0.02] rounded-full blur-3xl"
       />
       <motion.div
         style={{ y: y2 }}
-        className="absolute bottom-20 -right-20 w-80 h-80 bg-accent-500/[0.03] dark:bg-accent-500/[0.02] rounded-full blur-3xl"
+        className="absolute bottom-20 -right-20 w-56 sm:w-80 h-56 sm:h-80 bg-accent-500/[0.03] dark:bg-accent-500/[0.02] rounded-full blur-3xl"
       />
 
       {/* Very subtle dot pattern */}

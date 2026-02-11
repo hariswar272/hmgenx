@@ -19,6 +19,7 @@ export const NAV_LINKS = [
   { href: '#about', label: 'About' },
   { href: '#services', label: 'Services' },
   { href: '#portfolio', label: 'Portfolio' },
+  { href: '#team', label: 'Team' },
   { href: '#pricing', label: 'Pricing' },
   { href: '#omr', label: 'OMR System' },
   { href: '#contact', label: 'Contact' },

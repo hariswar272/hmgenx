@@ -46,11 +46,26 @@ export default function TiltCard({
     y.set(0.5);
   }
 
+  function handleTouch(e: React.TouchEvent<HTMLDivElement>) {
+    if (!ref.current || e.touches.length === 0) return;
+    const touch = e.touches[0];
+    const rect = ref.current.getBoundingClientRect();
+    x.set((touch.clientX - rect.left) / rect.width);
+    y.set((touch.clientY - rect.top) / rect.height);
+  }
+
+  function handleTouchEnd() {
+    x.set(0.5);
+    y.set(0.5);
+  }
+
   return (
     <motion.div
       ref={ref}
       onMouseMove={handleMouse}
       onMouseLeave={handleMouseLeave}
+      onTouchMove={handleTouch}
+      onTouchEnd={handleTouchEnd}
       style={{
         rotateX,
         rotateY,

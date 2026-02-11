@@ -67,8 +67,8 @@ export default function ContactSection() {
   return (
     <section id="contact" className="section-padding bg-[#f3f1ec] dark:bg-dark-surface relative overflow-hidden">
       {/* Background decoration */}
-      <div className="absolute top-1/4 right-0 w-96 h-96 bg-gradient-radial from-secondary-500/5 via-transparent to-transparent rounded-full blur-3xl" />
-      <div className="absolute bottom-1/4 left-0 w-96 h-96 bg-gradient-radial from-accent-500/5 via-transparent to-transparent rounded-full blur-3xl" />
+      <div className="absolute top-1/4 -right-32 w-64 sm:w-96 h-64 sm:h-96 bg-gradient-radial from-secondary-500/5 via-transparent to-transparent rounded-full blur-3xl" />
+      <div className="absolute bottom-1/4 -left-32 w-64 sm:w-96 h-64 sm:h-96 bg-gradient-radial from-accent-500/5 via-transparent to-transparent rounded-full blur-3xl" />
 
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative">
         <SectionHeading

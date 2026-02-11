@@ -22,6 +22,13 @@ export const teamMembers: TeamMember[] = [
     image: '/images/team/rayyan.jpg',
     bio: 'Strategic thinker focused on business growth',
   },
+  {
+    id: '4',
+    name: 'K.Venkat Suresh',
+    role: 'CMO',
+    image: '/images/team/venkat.jpg',
+    bio: 'Marketing strategist driving brand growth and customer engagement',
+  },
 ];
 
 export const teamStats = {

@@ -97,7 +97,7 @@ export default function HeroSection() {
           </motion.div>
 
           {/* Main Heading - Character by character animation */}
-          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl mb-6 leading-[1.3] font-bold tracking-tight">
+          <h1 className="text-[2rem] sm:text-5xl md:text-6xl lg:text-7xl mb-6 leading-[1.3] font-bold tracking-tight">
             <AnimatedText text="Your All-in-One" className="text-gray-900 dark:text-white" delay={0.2} ready={ready} />
             <br />
             <motion.span
